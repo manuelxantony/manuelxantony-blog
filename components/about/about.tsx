@@ -6,8 +6,8 @@ export default function About() {
       <div className="h-[820px] flex justify-center items-center">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col md:flex-row  gap-5">
-            <h1>{`Hi, I'm `}</h1>
-            <h1>
+            <h1 className="font-thin">{`Hi, I'm `}</h1>
+            <h1 className="font-bold">
               <AnimatedText text="Manuel Antony" />
             </h1>
           </div>
