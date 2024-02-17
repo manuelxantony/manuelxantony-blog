@@ -2,10 +2,10 @@ import AnimatedText from '../animated/animatedText';
 
 export default function About() {
   return (
-    <section className="container mx-auto">
-      <div className="md:h-[820px] flex justify-center items-center">
+    <section className="container mx-auto ">
+      <div className="h-[820px] flex justify-center items-center">
         <div className="flex flex-col gap-8">
-          <div className="flex flex-row gap-5">
+          <div className="flex flex-col md:flex-row  gap-5">
             <h1>{`Hi, I'm `}</h1>
             <h1>
               <AnimatedText text="Manuel Antony" />
