@@ -1,4 +1,4 @@
-import AnimatedText from '../animated/animatedText';
+import AnimatedText from '@/components/animated/animatedText';
 
 export default function Home() {
   return (
@@ -8,7 +8,6 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-5 relative">
             <h1 className="font-thin">{`Hi, I'm `}</h1>
             <h1 className="font-bold">
-              {/* Manuel Antony */}
               <AnimatedText text="Manuel Antony" />
             </h1>
           </div>
