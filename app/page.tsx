@@ -1,10 +1,10 @@
-import About from '@/components/about/about';
+import Home from '@/components/home/home';
 
-export default function Home() {
+export default function Page() {
   return (
     <main>
       <div>
-        <About />
+        <Home />
       </div>
     </main>
   );
