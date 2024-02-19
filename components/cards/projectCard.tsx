@@ -1,3 +1,7 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
+
 export default function ProjectCard({
   id,
   name,
@@ -7,31 +11,77 @@ export default function ProjectCard({
   name: string;
   description: string;
 }) {
+  const cardsContainer = useRef<HTMLDivElement>(null);
+
+  const applyOverlayMask = (e: PointerEvent) => {
+    if (!cardsContainer.current) {
+      return;
+    }
+
+    const x = e.pageX - cardsContainer.current.offsetLeft;
+    const y = e.pageY - cardsContainer.current.offsetTop;
+
+    cardsContainer.current.setAttribute(
+      'style',
+      `--x: ${x}px; --y: ${y}px; --opacity: 1`
+    );
+  };
+
+  useEffect(() => {
+    document.body.addEventListener('pointermove', (e) => {
+      applyOverlayMask(e);
+    });
+  }, []);
+
   return (
     // card design
-    <div className="border border-solid border-1 border-[#eceff133] rounded-[20px] h-[320px] mb-5 p-4 transition-colors bg-[#0f0e0e]">
-      {/* card content layout */}
-      <div className="h-full width flex flex-col justify-center items-center">
-        <h2 className="font-bold mb-4">{name}</h2>
-        <h4>{description}</h4>
+    <div className="relative" ref={cardsContainer}>
+      {/* main card */}
+      <div className="border border-solid border-1 border-[#eceff133]  h-[320px] mb-5 p-4 transition-colors bg-[#0f0e0e] ">
+        {/* card content layout */}
+        <div className="h-full width flex flex-col justify-center items-center text-gray-300 hover:text-white">
+          <h2 className="font-bold mb-4 ">{name}</h2>
+          <h4>{description}</h4>
+          <div className="flex flex-row gap-4 mt-4">
+            <button className="h-[50px]"></button>
+            <button className="h-[50px]"></button>
+          </div>
+        </div>
+      </div>
+
+      {/* twin card */}
+      <div
+        className="border border-solid border-1 border-[#ffffffa9] h-[320px] mb-5 p-4 transition-colors bg-[#edf3f952] text-transparent absolute inset-0  select-none pointer-events-none"
+        style={{
+          opacity: 'var(--opacity, 0)',
+          mask: `
+                radial-gradient(
+                  25rem 25rem at var(--x) var(--y),
+                  #000 1%,
+                  transparent 60%
+                )`,
+          WebkitMask: `
+                radial-gradient(
+                  25rem 25rem at var(--x) var(--y),
+                  #000 1%,
+                  transparent 60%
+                )`,
+        }}
+      >
+        {/* card content layout */}
+        <div className="h-full width flex flex-col justify-center items-center">
+          <h2 className="font-bold mb-4">{name}</h2>
+          <h4>{description}</h4>
+          <div className="flex flex-row gap-4 mt-4">
+            <button className="btn mt-5 w-[128px] h-[50px] bg-[#303030]">
+              Github
+            </button>
+            <button className="btn mt-5 w-[128px] h-[50px] bg-[#212121] ">
+              View
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
-
-// .resources_resource__NTeNg {
-//     --resource-bg: hsla(0,0%,9%,.3);
-//     width: 100%;
-//     height: 320px;
-//     border-radius: 20px;
-//     background: var(--resource-bg);
-//     box-shadow: var(--shadow-large);
-//     text-decoration: none;
-//     position: relative;
-//     -webkit-backdrop-filter: blur(3px);
-//     backdrop-filter: blur(3px);
-//     border: 1px solid var(--accents-2);
-//     z-index: 1;
-//     transition: background .25s ease;
-//     box-shadow: none;
-// }

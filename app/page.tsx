@@ -8,9 +8,9 @@ export default function Page() {
     <main>
       <div>
         <Home />
-        <Border />
+        {/* <Border /> */}
         <About />
-        <Border />
+        {/* <Border /> */}
         <Projects />
       </div>
     </main>

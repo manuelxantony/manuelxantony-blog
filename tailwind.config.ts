@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        animatedgradient: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,6 +22,9 @@ const config: Config = {
       },
       colors: {
         'project-card': '#EDEDED',
+      },
+      animation: {
+        gradient: 'animatedgradient 6s ease infinite alternate',
       },
     },
   },
