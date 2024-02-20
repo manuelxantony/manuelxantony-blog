@@ -58,7 +58,7 @@ body {
     background-size: 300%;
     -webkit-animation: animatedgradient 3s spring infinite alternate;
     -moz-animation: animatedgradient 3s spring infinite alternate;
-    animation: animatedgradient 3s spring infinite alternate;
+    animation: animatedgradient 5s spring infinite alternate;
   }
 }
 
@@ -99,6 +99,6 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translate(-10000px);
+    transform: translate(-1000px);
   }
 }

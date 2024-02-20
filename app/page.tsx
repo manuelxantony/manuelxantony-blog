@@ -10,7 +10,7 @@ export default function Page() {
         <div
           className="star-container bottom-0 rotate-[135deg]"
           style={{
-            '--span-time': '3s',
+            '--span-time': '5s',
           }}
         >
           <div className="star"></div>
