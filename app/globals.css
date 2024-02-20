@@ -56,20 +56,49 @@ body {
 
   .animate-gradient {
     background-size: 300%;
-    -webkit-animation: animatedgradient 6s ease infinite alternate;
-    -moz-animation: animatedgradient 6s ease infinite alternate;
-    animation: animatedgradient 6s ease infinite alternate;
+    -webkit-animation: animatedgradient 3s spring infinite alternate;
+    -moz-animation: animatedgradient 3s spring infinite alternate;
+    animation: animatedgradient 3s spring infinite alternate;
   }
+}
 
-  @keyframes animatedgradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+.div {
+  --span-time: 0s;
+}
+
+.star-container {
+  position: absolute;
+  width: 50%;
+  height: 50vh;
+  opacity: 0.25;
+}
+
+.star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  animation: animate-star-movement var(--span-time) linear infinite;
+}
+
+.star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 600px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animate-star-movement {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-10000px);
   }
 }

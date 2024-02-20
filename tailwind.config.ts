@@ -24,7 +24,7 @@ const config: Config = {
         'project-card': '#EDEDED',
       },
       animation: {
-        gradient: 'animatedgradient 6s ease infinite alternate',
+        gradient: 'animatedgradient 4s ease infinite alternate',
       },
     },
   },

@@ -3,9 +3,10 @@ import GradientText from '../gradient';
 export default function About() {
   return (
     <section className="container mx-auto">
-      <div className="h-screen w-full flex justify-center items-center p-20 ">
+      <div className="w-full flex justify-start">
         <div className="md:w-[750px]">
-          <h4>
+          <h1 className="font-bold mb-4">About</h1>
+          <h3 className="text-justify">
             <GradientText>
               A software engineer is a creative problem solver who designs,
               develops, and maintains software systems to meet specific needs.
@@ -15,7 +16,7 @@ export default function About() {
               technologies, collaborating within teams to build cutting-edge
               software products that shape the digital landscape.
             </GradientText>
-          </h4>
+          </h3>
         </div>
       </div>
     </section>
