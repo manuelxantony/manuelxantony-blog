@@ -31,8 +31,11 @@ export default function Projects() {
 
   return (
     <div>
-      <section className="container mx-auto">
-        <h1 className="font-bold mt-96 mx-3 mb-10">Projects</h1>
+      <section className="container mx-auto mt-96">
+        <div className="w-full relative h-8">
+          <div className="blur-line" />
+        </div>
+        <h1 className="font-bold  mx-3 mb-10">Projects</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px]">
           {projects.map((project) => {
             return (
