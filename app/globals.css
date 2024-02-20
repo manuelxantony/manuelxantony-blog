@@ -102,3 +102,12 @@ body {
     transform: translate(-1000px);
   }
 }
+
+.stary-sky-bg {
+  background-image: url('/stars.jpg');
+  opacity: 0.5;
+}
+
+.spiral-bg {
+  background-image: radial-gradient(red, green, blue);
+}
