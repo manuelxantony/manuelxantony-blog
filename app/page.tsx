@@ -7,28 +7,14 @@ export default function Page() {
   return (
     <main>
       <div>
-        <div
-          className="star-container bottom-0 rotate-[135deg]"
-          style={{
-            '--span-time': '5s',
-          }}
-        >
+        <div className="star-container bottom-0 rotate-[135deg]">
           <div className="star"></div>
         </div>
-        <div
-          className="star-container right-0 rotate-[45deg]"
-          style={{
-            '--span-time': '5s',
-          }}
-        >
+        <div className="star-container right-0 rotate-[45deg]">
           <div className="star"></div>
         </div>
         <Home />
-        {/* <Border /> */}
         <About />
-        {/* <Border /> */}
-        {/* <ParticleHexagon /> */}
-
         <Projects />
       </div>
     </main>

@@ -63,7 +63,7 @@ body {
 }
 
 .div {
-  --span-time: 0s;
+  --span-time: 5s;
 }
 
 .star-container {
@@ -82,7 +82,7 @@ body {
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
-  animation: animate-star-movement var(--span-time) linear infinite;
+  animation: animate-star-movement 5s linear infinite;
 }
 
 .star::before {
