@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 
 export default function AnimatedText({ text }: { text: string }) {
-  console.log(typeof text);
   const textToAnimate = text.split(' ');
 
   return (

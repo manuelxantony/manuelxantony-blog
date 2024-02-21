@@ -6,11 +6,16 @@ export default function ProjectCard({
   id,
   name,
   description,
+  url,
+  github,
 }: {
   id: number;
   name: string;
   description: string;
+  url: string;
+  github: string;
 }) {
+  console.log(github);
   const cardsContainer = useRef<HTMLDivElement>(null);
 
   const applyOverlayMask = (e: PointerEvent) => {
@@ -38,6 +43,10 @@ export default function ProjectCard({
     };
   }, []);
 
+  const openNewTab = (urlToOpen: string) => {
+    window.open(urlToOpen, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     // card design
     <div className="relative" ref={cardsContainer}>
@@ -48,8 +57,18 @@ export default function ProjectCard({
           <h2 className="font-bold mb-4">{name}</h2>
           <h4>{description}</h4>
           <div className="flex flex-row gap-4 mt-4">
-            <button className="btn mt-5 w-[128px] h-[50px]"></button>
-            <button className="btn mt-5 w-[128px] h-[50px]"></button>
+            <button
+              className="btn mt-5 w-[128px] h-[50px]"
+              onClick={() => {
+                openNewTab(github);
+              }}
+            />
+            <button
+              className="btn mt-5 w-[128px] h-[50px]"
+              onClick={() => {
+                openNewTab(url);
+              }}
+            />
           </div>
         </div>
       </div>
@@ -78,12 +97,12 @@ export default function ProjectCard({
           <h2 className="font-bold mb-4">{name}</h2>
           <h4>{description}</h4>
           <div className="flex flex-row gap-4 mt-4">
-            <button className="btn mt-5 w-[128px] h-[50px] bg-[#303030]">
+            <div className="btn mt-5 w-[128px] h-[50px] bg-[#303030]">
               Github
-            </button>
-            <button className="btn mt-5 w-[128px] h-[50px] bg-[#212121] ">
+            </div>
+            <div className="btn mt-5 w-[128px] h-[50px] bg-[#212121] ">
               View
-            </button>
+            </div>
           </div>
         </div>
       </div>

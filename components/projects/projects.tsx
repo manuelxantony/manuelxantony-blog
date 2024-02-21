@@ -6,26 +6,36 @@ export default function Projects() {
       id: 1,
       name: 'Snapshop',
       description: 'A minimalistic shopping cart',
+      url: 'https://snapshop-eight.vercel.app/',
+      github: 'https://github.com/manuelxantony/snapshop',
     },
     {
       id: 2,
       name: 'Project 2',
       description: 'This is a small project description.',
+      url: '',
+      github: 'https://github.com/manuelxantony/snapshop',
     },
     {
       id: 3,
       name: 'Project 3',
       description: 'This is a small project description.',
+      url: '',
+      github: '',
     },
     {
       id: 4,
       name: 'Project 4',
       description: 'This is a small project description.',
+      url: '',
+      github: '',
     },
     {
       id: 5,
       name: 'Project 5',
       description: 'This is a small project description.',
+      url: '',
+      github: '',
     },
   ];
 
@@ -43,6 +53,8 @@ export default function Projects() {
               id={project.id}
               name={project.name}
               description={project.description}
+              url={project.url}
+              github={project.github}
             />
           );
         })}
