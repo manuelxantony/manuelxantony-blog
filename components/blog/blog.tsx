@@ -1,4 +1,5 @@
 import BlogCard from '@/components/cards/blogCard';
+import Border from '../border';
 
 export default function Blog() {
   const blogPostMetaData = [
@@ -11,14 +12,14 @@ export default function Blog() {
     {
       id: 2,
       slur: '',
-      title: 'Hooks Im Reat',
+      title: 'Hooks In React',
       description: 'Why hooks matters in developing react applications.',
     },
     {
       id: 3,
       slur: '',
       title: 'Redux',
-      description: 'how to and when to use redux',
+      description: 'How to and when to use redux',
     },
     {
       id: 4,
@@ -34,17 +35,19 @@ export default function Blog() {
         <div className="blur-line" />
       </div>
       <h1 className="font-bold  mx-3 mb-10">Blog</h1>
-      <div className="flex flex-col items-center justify-center gap-5 ">
+      <div className="flex flex-col items-left gap-5 ">
         {blogPostMetaData.map((post) => {
           console.log(post);
           return (
-            <BlogCard
-              key={post.id}
-              id={post.id}
-              slur={post.slur}
-              title={post.title}
-              description={post.description}
-            />
+            <div key={post.id} className="w-full md:w-[60%] mb-7">
+              <BlogCard
+                id={post.id}
+                slur={post.slur}
+                title={post.title}
+                description={post.description}
+              />
+              {/* <Border /> */}
+            </div>
           );
         })}
       </div>
