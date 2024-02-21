@@ -31,27 +31,32 @@ export default function ProjectCard({
     document.body.addEventListener('pointermove', (e) => {
       applyOverlayMask(e);
     });
+    return () => {
+      document.body.removeEventListener('pointermove', (e) => {
+        applyOverlayMask(e);
+      });
+    };
   }, []);
 
   return (
     // card design
     <div className="relative" ref={cardsContainer}>
       {/* main card */}
-      <div className="border border-solid border-1 border-[#eceff133]  h-[320px] mb-5 p-4 transition-colors bg-[#0f0e0e] ">
+      <div className="rounded-3xl border border-solid border-1 border-[#eceff133]  h-[320px] mb-5 p-4 transition-colors bg-[#0707075b] ">
         {/* card content layout */}
-        <div className="h-full width flex flex-col justify-center items-center text-gray-300 hover:text-white">
-          <h2 className="font-bold mb-4 ">{name}</h2>
+        <div className="h-full width flex flex-col justify-center items-center text-gray-100">
+          <h2 className="font-bold mb-4">{name}</h2>
           <h4>{description}</h4>
           <div className="flex flex-row gap-4 mt-4">
-            <button className="h-[50px]"></button>
-            <button className="h-[50px]"></button>
+            <button className="btn mt-5 w-[128px] h-[50px]"></button>
+            <button className="btn mt-5 w-[128px] h-[50px]"></button>
           </div>
         </div>
       </div>
 
       {/* twin card */}
       <div
-        className="border border-solid border-1 border-[#ffffffa9] h-[320px] mb-5 p-4 transition-colors bg-[#edf3f952] text-transparent absolute inset-0  select-none pointer-events-none"
+        className="rounded-3xl border border-solid border-1 border-[#ffffffa9] h-[320px] mb-5 p-4 transition-colors bg-[#00000000] text-transparent absolute inset-0  select-none pointer-events-none"
         style={{
           opacity: 'var(--opacity, 0)',
           mask: `
@@ -69,7 +74,7 @@ export default function ProjectCard({
         }}
       >
         {/* card content layout */}
-        <div className="h-full width flex flex-col justify-center items-center">
+        <div className="h-full width flex flex-col justify-center items-center text-white">
           <h2 className="font-bold mb-4">{name}</h2>
           <h4>{description}</h4>
           <div className="flex flex-row gap-4 mt-4">
