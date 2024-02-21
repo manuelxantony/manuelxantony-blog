@@ -42,7 +42,7 @@ export default function ProjectCard({
     // card design
     <div className="relative" ref={cardsContainer}>
       {/* main card */}
-      <div className="rounded-3xl border border-solid border-1 border-[#eceff133]  h-[320px] mb-5 p-4 transition-colors bg-[#0707075b] ">
+      <div className="rounded-3xl border border-solid border-1 border-[#eceff133]  h-[320px] mb-5 p-4  ">
         {/* card content layout */}
         <div className="h-full width flex flex-col justify-center items-center text-gray-100">
           <h2 className="font-bold mb-4">{name}</h2>
