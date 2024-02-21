@@ -10,7 +10,7 @@ export default function Page() {
         <div className="star-container bottom-20 rotate-[135deg]">
           <div className="star"></div>
         </div>
-        <div className="star-container right-20 rotate-[55deg]">
+        <div className="star-container bottom-50 md:right-20 rotate-[55deg]">
           <div className="star"></div>
         </div>
         <Home />
