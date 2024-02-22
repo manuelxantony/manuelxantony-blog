@@ -13,7 +13,6 @@ export default function BlogCard({
   description: string;
   link: string;
 }) {
-  console.log('--------------', link, '-----------------------------');
   return (
     // <div className="w-full md:w-[60%] h-[200px] bg-[#000000] border border-solid border-1 border-[#eceff133] rounded-3xl p-7 hover:border-[#f9fafaa1] relative">
     <div className="w-full  h-[100px]">
