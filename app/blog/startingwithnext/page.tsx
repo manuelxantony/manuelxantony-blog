@@ -1,3 +1,5 @@
+import Border from '@/components/border';
+
 export default function Page() {
   return (
     <div className="w-full mt-20  p-10 flex justify-center items-center">
@@ -5,8 +7,9 @@ export default function Page() {
         {/* heading */}
         <div className="text-[50px] font-bold">STARTING WITH NEXTJS</div>
         {/* content */}
-        <div>
-          <p className="text-justify">
+        <div className="blur-line-standalone " />
+        <div className="mt-20">
+          <p className="text-justify text-gray-400">
             {` Next.js is a popular React framework for building web applications. It provides a set of tools and conventions that make it easier to develop React applications with features like server-side rendering, static site generation, client-side routing, and more.
 
 Key features of Next.js include:

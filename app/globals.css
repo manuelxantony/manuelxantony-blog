@@ -163,6 +163,18 @@ body {
   );
 }
 
+.blur-line-standalone {
+  top: -500%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+}
+
 .blur-line-blog-card {
   height: 1px;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
