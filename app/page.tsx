@@ -2,6 +2,7 @@ import Home from '@/components/home/home';
 import About from '@/components/about/about';
 import Projects from '@/components/projects/projects';
 import Blog from '@/components/blog/blog';
+import NavBar from '@/components/nav';
 
 export default function Page() {
   return (

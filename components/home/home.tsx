@@ -4,7 +4,7 @@ import AnimatedText from '@/components/animated/animatedText';
 
 export default function Home() {
   return (
-    <section className="container mx-auto relative opacity-100">
+    <section id="home" className="container mx-auto relative opacity-100">
       {/* background */}
       <div className="h-screen w-full  stary-sky-bg" />
       <div className="flex justify-center items-center absolute top-0 bottom-0 right-0 left-0">

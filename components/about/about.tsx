@@ -2,7 +2,7 @@ import GradientText from '../gradient';
 
 export default function About() {
   return (
-    <section className="container mx-auto">
+    <section id="about" className="container mx-auto pt-[100px]">
       <div className="w-full flex justify-start">
         <div className="md:w-[750px]">
           <h1 className="font-bold mb-4">About</h1>
@@ -14,7 +14,12 @@ export default function About() {
               debugging, ensuring efficient and reliable software solutions.
               With a passion for innovation, they continuously adapt to emerging
               technologies, collaborating within teams to build cutting-edge
-              software products that shape the digital landscape.
+              software products that shape the digital landscape. They possess
+              strong analytical skills, adept at coding and debugging, ensuring
+              efficient and reliable software solutions. With a passion for
+              innovation, they continuously adapt to emerging technologies,
+              collaborating within teams to build cutting-edge software products
+              that shape the digital landscape.
             </GradientText>
           </h3>
         </div>

@@ -40,7 +40,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="container mx-auto mt-96">
+    <section id="projects" className="container mx-auto mt-96 ">
       <div className="w-full relative h-8">
         <div className="blur-line" />
       </div>
