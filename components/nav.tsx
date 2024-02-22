@@ -1,29 +1,37 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
+import { log } from 'console';
 
 export default function NavBar() {
+  const sectionRefs = useRef([]);
   const [selectedButton, setSelectedButton] = useState('home');
   const [section, setSection] = useState('home');
 
-  //   useEffect(() => {
-  //     // let section = document.getSelection; //querySelectorAll('section');
-  //     // console.log(section, '------------');
-  //     // // const targetId = href.replace(/.*\#/, '');
-  //     const handleScroll = (
-  //       e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  //     ) => {
-  //       e.preventDefault();
+  useEffect(() => {
+    const options = {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px', // No margin
+      threshold: 0.5, // Trigger when 50% of the section is visible
+    };
 
-  //       const href = e.currentTarget.href;
-  //       const targetId = href.replace(/.*\#/, '');
-  //       const ele = document.getElementById(targetId);
-  //       return ele;
-  //     };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log(entry.target.id);
+        }
+      });
+    }, options);
 
-  //     console.log(handleScroll());
-  //   });
+    sectionRefs.current.forEach((ref) => {
+      observer.observe(ref);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  });
 
   const handleClick = (buttonName: string) => {
     setSelectedButton(buttonName);
@@ -61,10 +69,10 @@ export default function NavBar() {
             selectedButton == 'about' ? 'bg-[#95959562] text-white' : ''
           }`}
           onClick={() => {
-            handleClick('spiral');
+            handleClick('about');
           }}
         >
-          <Link href="#spiral" onClick={handleScroll}>
+          <Link href="#about" onClick={handleScroll}>
             About
           </Link>
         </button>

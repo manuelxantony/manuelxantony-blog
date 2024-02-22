@@ -1,5 +1,4 @@
 import BlogCard from '@/components/cards/blogCard';
-import Border from '../border';
 
 export default function Blog() {
   const blogPostMetaData = [
@@ -8,29 +7,33 @@ export default function Blog() {
       slur: '',
       title: 'Starting With Next',
       description: 'Why I think next is a promising platform',
+      link: '/blog/startingwithnext',
     },
     {
       id: 2,
       slur: '',
       title: 'Hooks In React',
       description: 'Why hooks matters in developing react applications.',
+      link: '',
     },
     {
       id: 3,
       slur: '',
       title: 'Redux',
       description: 'How to and when to use redux',
+      link: '',
     },
     {
       id: 4,
       slur: '',
       title: 'Design',
       description: 'Why design matters and what it tells about a you?',
+      link: '',
     },
   ];
 
   return (
-    <section id="blog" className="container mx-auto mt-96">
+    <section className="container mx-auto mt-96">
       <div className="w-full relative h-8">
         <div className="blur-line" />
       </div>
@@ -45,6 +48,7 @@ export default function Blog() {
                 slur={post.slur}
                 title={post.title}
                 description={post.description}
+                link={post.link}
               />
               {/* <Border /> */}
             </div>
