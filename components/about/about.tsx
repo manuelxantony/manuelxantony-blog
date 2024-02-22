@@ -8,18 +8,17 @@ export default function About() {
           <h1 className="font-bold mb-4">About</h1>
           <h3 className="text-justify">
             <GradientText>
-              A software engineer is a creative problem solver who designs,
-              develops, and maintains software systems to meet specific needs.
-              They possess strong analytical skills, adept at coding and
-              debugging, ensuring efficient and reliable software solutions.
-              With a passion for innovation, they continuously adapt to emerging
-              technologies, collaborating within teams to build cutting-edge
-              software products that shape the digital landscape. They possess
-              strong analytical skills, adept at coding and debugging, ensuring
-              efficient and reliable software solutions. With a passion for
-              innovation, they continuously adapt to emerging technologies,
-              collaborating within teams to build cutting-edge software products
-              that shape the digital landscape.
+              {`Software Engineer with a passion for innovation and a track
+              record of delivering impactful products. With over three years of
+              hands-on experience, I've played a pivotal role in numerous
+              in-house projects within a dynamic platform engineering team. My
+              expertise spans multiple programming languages, including Golang,
+              React, Node, and Python, allowing me to navigate the entire
+              product development lifecycle seamlessly. Proficient in Docker
+              containerization and skilled in MongoDB databases, I specialize in
+              designing and implementing efficient data management solutions.
+              Currently, I'm focused on leveraging Next.js to build cutting-edge
+              web applications that push the boundaries of technology.`}
             </GradientText>
           </h3>
         </div>

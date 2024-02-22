@@ -49,7 +49,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="flex mt-5">
+    <nav className="flex ">
       <div className="nav-container">
         <div className="nav-container-stroke"></div>
         <button
