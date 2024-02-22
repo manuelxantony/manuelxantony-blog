@@ -15,7 +15,7 @@ export default function Page() {
           <div className="star"></div>
         </div>
         <Home />
-        <div className="spiral-bg overflow-hidden" />
+        <div id="spiral" className="spiral-bg overflow-hidden" />
         <About />
         <Projects />
         <Blog />

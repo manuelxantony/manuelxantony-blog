@@ -1,16 +1,33 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function NavBar() {
   const [selectedButton, setSelectedButton] = useState('home');
+  const [section, setSection] = useState('home');
+
+  //   useEffect(() => {
+  //     // let section = document.getSelection; //querySelectorAll('section');
+  //     // console.log(section, '------------');
+  //     // // const targetId = href.replace(/.*\#/, '');
+  //     const handleScroll = (
+  //       e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  //     ) => {
+  //       e.preventDefault();
+
+  //       const href = e.currentTarget.href;
+  //       const targetId = href.replace(/.*\#/, '');
+  //       const ele = document.getElementById(targetId);
+  //       return ele;
+  //     };
+
+  //     console.log(handleScroll());
+  //   });
 
   const handleClick = (buttonName: string) => {
     setSelectedButton(buttonName);
   };
-
-  console.log(selectedButton);
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
@@ -44,10 +61,10 @@ export default function NavBar() {
             selectedButton == 'about' ? 'bg-[#95959562] text-white' : ''
           }`}
           onClick={() => {
-            handleClick('about');
+            handleClick('spiral');
           }}
         >
-          <Link href="#about" onClick={handleScroll}>
+          <Link href="#spiral" onClick={handleScroll}>
             About
           </Link>
         </button>
