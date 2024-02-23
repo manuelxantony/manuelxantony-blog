@@ -6,7 +6,7 @@ export default function AnimatedText({ text }: { text: string }) {
   const textToAnimate = text.split(' ');
 
   return (
-    <div>
+    <div className="text-white">
       {textToAnimate.map((word, i) => (
         <motion.span
           initial={{ opacity: 0 }}

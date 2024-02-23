@@ -49,8 +49,8 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="flex ">
-      <div className="nav-container">
+    <nav className="flex">
+      <div className="nav-container text-white md:ml-[120px]">
         <div className="nav-container-stroke"></div>
         <button
           className={`nav-button  hover:text-white ${

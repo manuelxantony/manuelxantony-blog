@@ -5,7 +5,7 @@ export default function About() {
     <section id="about" className="container mx-auto pt-[100px]">
       <div className="w-full flex justify-start">
         <div className="md:w-[750px]">
-          <h1 className="font-bold mb-4">About</h1>
+          <h1 className="font-bold mb-4 text-white">About</h1>
           <h3 className="text-justify">
             <GradientText>
               {`Software Engineer with a passion for innovation and a track

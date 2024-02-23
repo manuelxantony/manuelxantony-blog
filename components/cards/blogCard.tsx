@@ -15,7 +15,7 @@ export default function BlogCard({
 }) {
   return (
     // <div className="w-full md:w-[60%] h-[200px] bg-[#000000] border border-solid border-1 border-[#eceff133] rounded-3xl p-7 hover:border-[#f9fafaa1] relative">
-    <div className="w-full  h-[100px]">
+    <div className="w-full  h-[100px] text-white">
       <Link className="h-full flex flex-col gap-4 justify-center" href={link}>
         <div className="text-[30px] font-bold ">{title}</div>
         <p>{description}</p>

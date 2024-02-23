@@ -20,24 +20,24 @@ export default function Header() {
       <div className="w-full flex justify-center">
         <NavBar />
       </div>
-      <div className="flex flex-row items-center h-[36px] bt-5 mx-10 gap-10  ">
+      <div className="flex flex-row items-center h-[36px] bt-5 mx-10 gap-5  ">
         <button
           onClick={() => {
             openNewTab('https://twitter.com/xmanuelxantony');
           }}
           className="text-[14px] font-medium"
         >
-          <AiFillTwitterCircle size={22} />
+          <AiFillTwitterCircle size={22} color="white" />
         </button>
 
-        <button
+        {/* <button
           onClick={() => {
             navigator.clipboard.writeText('manuelxantony@gmail.com');
           }}
           className="text-[14px] font-medium"
         >
-          <AiOutlineMail size={22} />
-        </button>
+          <AiOutlineMail size={22} color="white" />
+        </button> */}
 
         <button
           onClick={() => {
@@ -45,7 +45,7 @@ export default function Header() {
           }}
           className="text-[14px] font-medium"
         >
-          <AiFillGithub size={22} />
+          <AiFillGithub size={22} color="white" />
         </button>
       </div>
     </header>

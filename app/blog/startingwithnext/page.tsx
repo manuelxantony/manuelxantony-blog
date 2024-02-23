@@ -2,15 +2,18 @@ import Border from '@/components/border';
 
 export default function Page() {
   return (
-    <div className="w-full mt-20  p-10 flex justify-center items-center">
-      <div className="md:w-[1000px] flex flex-col  justify-center items-center">
-        {/* heading */}
-        <div className="text-[50px] font-bold">STARTING WITH NEXTJS</div>
-        {/* content */}
-        <div className="blur-line-standalone " />
-        <div className="mt-20">
-          <p className="text-justify text-gray-400">
-            {` Next.js is a popular React framework for building web applications. It provides a set of tools and conventions that make it easier to develop React applications with features like server-side rendering, static site generation, client-side routing, and more.
+    <main className="bg-black ">
+      <div className="w-full mt-20  p-10 flex justify-center ">
+        <div className="md:w-[1000px] flex flex-col  justify-center items-center">
+          {/* heading */}
+          <div className="text-[50px] font-bold text-white">
+            STARTING WITH NEXTJS
+          </div>
+          {/* content */}
+          <div className="blur-line-standalone" />
+          <div className="mt-20">
+            <p className="text-justify text-gray-400">
+              {` Next.js is a popular React framework for building web applications. It provides a set of tools and conventions that make it easier to develop React applications with features like server-side rendering, static site generation, client-side routing, and more.
 
 Key features of Next.js include:
 
@@ -29,9 +32,10 @@ Key features of Next.js include:
 7. **TypeScript support:** Next.js has built-in support for TypeScript, allowing you to write type-safe React components and applications.
 
 Overall, Next.js provides a powerful and flexible framework for building modern web applications with React. It is widely used in industry and has a large and active community of developers.`}
-          </p>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

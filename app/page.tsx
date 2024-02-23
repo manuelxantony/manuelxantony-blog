@@ -3,7 +3,6 @@ import About from '@/components/about/about';
 import Projects from '@/components/projects/projects';
 import Blog from '@/components/blog/blog';
 import Header from '@/components/header';
-import { useRef, useState } from 'react';
 
 export default function Page() {
   return (

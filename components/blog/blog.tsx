@@ -37,7 +37,7 @@ export default function Blog() {
       <div className="w-full relative h-8">
         <div className="blur-line" />
       </div>
-      <h1 className="font-bold  mx-3 mb-10">Blog</h1>
+      <h1 className="font-bold  mx-3 mb-10 text-white">Blog</h1>
       <div className="flex flex-col items-left gap-5 ">
         {blogPostMetaData.map((post) => {
           console.log(post);
